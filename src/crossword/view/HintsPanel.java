@@ -20,6 +20,8 @@ public class HintsPanel extends JPanel
 	private javax.swing.JLabel downLabel;
 	private javax.swing.JList<String> downList;
 	private javax.swing.JScrollPane downListContainer;
+	// End of variables declaration//GEN-END:variables
+
 	/**
 	 * Creates new form HintsPanel
 	 *
@@ -143,5 +145,4 @@ public class HintsPanel extends JPanel
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    // End of variables declaration//GEN-END:variables
 }

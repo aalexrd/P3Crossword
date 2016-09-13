@@ -31,6 +31,8 @@ public class View extends JFrame implements Observer
 	private javax.swing.JMenu modeMenu;
 	private javax.swing.JMenuItem normalMenuItem;
 	private javax.swing.JMenuItem viewSolutionMenuItem;
+	// End of variables declaration//GEN-END:variables
+
 	/**
 	 * Creates new form View
 	 */
@@ -225,6 +227,5 @@ public class View extends JFrame implements Observer
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    // End of variables declaration//GEN-END:variables
 
 }

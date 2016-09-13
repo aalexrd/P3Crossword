@@ -13,6 +13,7 @@ public class CellPanel extends JPanel
 	// Variables declaration - do not modify//GEN-BEGIN:variables
 	private javax.swing.JLabel letter;
 	private javax.swing.JLabel number;
+	// End of variables declaration//GEN-END:variables
 
 	/**
 	 * Creates new form CellPanel
@@ -126,5 +127,4 @@ public class CellPanel extends JPanel
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    // End of variables declaration//GEN-END:variables
 }
