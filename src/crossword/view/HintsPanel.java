@@ -2,22 +2,28 @@ package crossword.view;
 
 import crossword.model.Model;
 import crossword.model.Word;
-import java.awt.Dimension;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
-import javax.swing.DefaultListModel;
-import javax.swing.JPanel;
 
 public class HintsPanel extends JPanel
 {
 
 	private final int height;
 	private final ArrayList<Word> wordsList;
-	Model model;
-
+	private Model model;
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JLabel acrossLabel;
+	private javax.swing.JList<String> acrossList;
+	private javax.swing.JScrollPane acrossListContainer;
+	private javax.swing.JLabel downLabel;
+	private javax.swing.JList<String> downList;
+	private javax.swing.JScrollPane downListContainer;
 	/**
 	 * Creates new form HintsPanel
 	 *
-	 * @param model
+	 * @param model model to extract from
 	 */
 	public HintsPanel(Model model)
 	{
@@ -36,8 +42,8 @@ public class HintsPanel extends JPanel
 
 	public void refreshLists()
 	{
-		DefaultListModel across = new DefaultListModel();
-		DefaultListModel down = new DefaultListModel();
+		DefaultListModel<String> across = new DefaultListModel<>();
+		DefaultListModel<String> down = new DefaultListModel<>();
 		for (int i = 0; i < wordsList.size(); ++i)
 		{
 			Word word = wordsList.get(i);
@@ -137,13 +143,5 @@ public class HintsPanel extends JPanel
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel acrossLabel;
-    private javax.swing.JList<String> acrossList;
-    private javax.swing.JScrollPane acrossListContainer;
-    private javax.swing.JLabel downLabel;
-    private javax.swing.JList<String> downList;
-    private javax.swing.JScrollPane downListContainer;
     // End of variables declaration//GEN-END:variables
 }

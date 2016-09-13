@@ -3,20 +3,19 @@ package crossword.view;
 import crossword.controller.GridController;
 import crossword.model.Model;
 import crossword.model.Word;
-import java.awt.Color;
-import java.awt.GridBagConstraints;
-import java.util.ArrayList;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.MatteBorder;
+import java.awt.*;
+import java.util.ArrayList;
 
 public class GridPanel extends JPanel
 {
 
-	int rows;
-	int cols;
-	GridController gridController;
-	Model model;
+	private int rows;
+	private int cols;
+	private Model model;
 
 	/**
 	 * Creates new form GridPanel
@@ -37,7 +36,7 @@ public class GridPanel extends JPanel
 	 */
 	private void initGrid()
 	{
-		gridController = new GridController(model);
+		GridController gridController = new GridController(model);
 		GridBagConstraints gbc = new GridBagConstraints();
 		CellPanel[][] gridC = model.getGrid();
 		for (int i = 0; i < rows; i++)

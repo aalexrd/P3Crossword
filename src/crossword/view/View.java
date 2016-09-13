@@ -3,28 +3,80 @@ package crossword.view;
 import crossword.controller.MenuController;
 import crossword.loader.CrossWordsLoader;
 import crossword.model.Model;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.util.Observable;
 import java.util.Observer;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class View extends JFrame implements Observer
 {
 
-	MenuController menuController;
-	Model model;
+	private MenuController menuController;
+	private Model model;
 	private javax.swing.JPanel grid;
 	private javax.swing.JPanel hints;
-
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JMenuItem aboutMenuItem;
+	private javax.swing.JMenuItem assistedMenuItem;
+	private javax.swing.JMenuItem checkMenuItem;
+	private javax.swing.JMenu crosswordMenu;
+	private javax.swing.JMenuItem exitMenuItem;
+	private JFileChooser fileChooser;
+	private javax.swing.JMenu fileMenu;
+	private javax.swing.JMenu helpMenu;
+	private javax.swing.JMenuItem helpMenuItem;
+	private javax.swing.JMenuItem loadMenuItem;
+	private javax.swing.JMenuBar menuBar;
+	private javax.swing.JMenu modeMenu;
+	private javax.swing.JMenuItem normalMenuItem;
+	private javax.swing.JMenuItem viewSolutionMenuItem;
 	/**
 	 * Creates new form View
 	 */
 	public View()
 	{
 		initComponents();
+	}
+
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String args[])
+	{
+		/* Set the Nimbus look and feel */
+		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+	     * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+		 */
+		try
+		{
+			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
+			{
+				if ("Nimbus".equals(info.getName()))
+				{
+					UIManager.setLookAndFeel(info.getClassName());
+					break;
+				}
+			}
+		}
+		catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex)
+		{
+			java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+		}
+		//</editor-fold>
+
+		//</editor-fold>
+
+		/* Create and display the form */
+		java.awt.EventQueue.invokeLater(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				new View().setVisible(true);
+			}
+		});
 	}
 
 	public void load()
@@ -173,62 +225,6 @@ public class View extends JFrame implements Observer
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[])
-	{
-		/* Set the Nimbus look and feel */
-		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-		 */
-		try
-		{
-			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
-			{
-				if ("Nimbus".equals(info.getName()))
-				{
-					UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		}
-		catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex)
-		{
-			java.util.logging.Logger.getLogger(View.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		//</editor-fold>
-
-		//</editor-fold>
-
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				new View().setVisible(true);
-			}
-		});
-	}
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem assistedMenuItem;
-    private javax.swing.JMenuItem checkMenuItem;
-    private javax.swing.JMenu crosswordMenu;
-    private javax.swing.JMenuItem exitMenuItem;
-    private JFileChooser fileChooser;
-    private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenu helpMenu;
-    private javax.swing.JMenuItem helpMenuItem;
-    private javax.swing.JMenuItem loadMenuItem;
-    private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenu modeMenu;
-    private javax.swing.JMenuItem normalMenuItem;
-    private javax.swing.JMenuItem viewSolutionMenuItem;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -6,10 +6,13 @@ import java.awt.*;
 public class CellPanel extends JPanel
 {
 
-	boolean available;
-	char answer;
-	int i;
-	int j;
+	private boolean available;
+	private char answer;
+	private int i;
+	private int j;
+	// Variables declaration - do not modify//GEN-BEGIN:variables
+	private javax.swing.JLabel letter;
+	private javax.swing.JLabel number;
 
 	/**
 	 * Creates new form CellPanel
@@ -123,9 +126,5 @@ public class CellPanel extends JPanel
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel letter;
-    private javax.swing.JLabel number;
     // End of variables declaration//GEN-END:variables
 }

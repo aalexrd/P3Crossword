@@ -1,13 +1,14 @@
 package crossword.controller;
 
 import crossword.view.View;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuController implements ActionListener
 {
 
-	View view;
+	private View view;
 
 	public MenuController(View view)
 	{

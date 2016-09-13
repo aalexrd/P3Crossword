@@ -2,23 +2,23 @@ package crossword.model;
 
 import crossword.view.CellPanel;
 import crossword.view.HintsPanel;
-import java.awt.Color;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Observable;
 
 public class Model extends Observable
 {
 
-	private CellPanel current;
+	private final int rows;
+	private final int cols;
 	private boolean assisted;
 	private boolean typeDirection;
 	private boolean panelClicked;
-	private final int rows;
-	private final int cols;
-
-	public CellPanel[][] grid;
-	public HintsPanel hints;
-	public ArrayList<Word> wordsList;
+	private CellPanel current;
+	private CellPanel[][] grid;
+	private HintsPanel hints;
+	private ArrayList<Word> wordsList;
 
 	public Model(CrossWord c)
 	{
@@ -32,9 +32,8 @@ public class Model extends Observable
 
 	public void check()
 	{
-		for (int i = 0; i < wordsList.size(); ++i)
+		for (Word word : wordsList)
 		{
-			Word word = wordsList.get(i);
 			if (word.isDirection()) // Horizontal
 			{
 				for (int j = word.getCol(), k = word.getRow(); j < word.getTerm().length(); ++j)
@@ -174,11 +173,6 @@ public class Model extends Observable
 	public void setAssisted(boolean assisted)
 	{
 		this.assisted = assisted;
-	}
-
-	public void setCurrent(CellPanel current)
-	{
-		this.current = current;
 	}
 
 	public void setTypeDirection(boolean typeDirection)

@@ -12,7 +12,7 @@ import java.awt.event.MouseListener;
 public class GridController implements MouseListener, KeyListener
 {
 
-	Model model;
+	private Model model;
 
 	public GridController(Model model)
 	{
